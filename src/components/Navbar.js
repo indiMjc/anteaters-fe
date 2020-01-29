@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = props => {
 	return (
 		<div className='navbar'>
-			<input type='search' />
+			<input type='search' name='search' placeholder='Search' className='search-bar' />
 			<NavLink exact={true} to={'/'}>
 				Home
 			</NavLink>
