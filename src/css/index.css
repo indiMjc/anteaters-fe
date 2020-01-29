@@ -72,6 +72,13 @@
     border: 1px solid black;
   }
 }
+.navbar .search-bar {
+  border-radius: 1rem;
+  border: none;
+  height: 1.5rem;
+  padding: 1rem;
+  box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
 .navbar .active {
   box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
   transform: scale(0.96);
