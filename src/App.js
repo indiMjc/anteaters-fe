@@ -1,15 +1,13 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
-function App() {
+const App = props => {
 	return (
 		<div className='App'>
-			<div className='test'>
-				<a href='#'>
-					<span>link</span>
-				</a>
-			</div>
+			<Navbar {...props} />
 		</div>
 	);
-}
+};
 
-export default App;
+export default withRouter(App);

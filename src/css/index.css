@@ -8,43 +8,45 @@
   text-align: center;
   padding-top: 10rem;
   background: #ebf5fc;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
 }
-.App .test {
-  background: #ebf5fc;
-  box-shadow: -0.6rem -0.6rem 2rem #ffffff, 0.6rem 0.6rem 2rem rgba(0, 0, 0, 0.1);
+.navbar {
+  height: 10rem;
+  width: 80vw;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  width: 20vh;
-  min-height: 20vh;
+  background-color: #ebf5fc;
   margin: 0 auto;
-  padding-bottom: 2rem;
-  border-radius: 1rem;
+  padding: 0 4rem;
+  border: 1px solid #dae2e96b;
+  border-radius: 0.7rem;
+  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
 }
-.App .test:hover {
-  box-shadow: inset -0.6rem -0.6rem 1rem rgba(255, 255, 255, 0.5), inset 0.6rem 0.6rem 2rem rgba(0, 0, 0, 0.05);
+.navbar:hover {
+  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
   transform: scale(0.98);
 }
-.App .test:hover a {
-  box-shadow: -0.45rem -0.45rem 1.5rem #ffffff, 0.45rem 0.45rem 1.5rem rgba(0, 0, 0, 0.1);
-}
-.App .test a {
-  box-shadow: -0.4rem -0.4rem 1.5rem #ffffff, 0.4rem 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
+.navbar a {
+  text-align: center;
+  height: 3rem;
+  min-width: 10rem;
+  font-size: 1rem;
   color: teal;
   font-weight: bolder;
-  padding-top: 0.4rem;
   text-decoration: none;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  width: 33%;
-  height: 2rem;
+  background-color: #ebf5fc;
+  padding: 1rem 1.5rem;
+  border: 1px solid #dae2e96b;
+  border-radius: 0.4rem;
+  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
 }
-.App .test a:active {
-  box-shadow: inset -0.4rem -0.4rem 1.5rem rgba(255, 255, 255, 0.5), inset 0.4rem 0.4rem 1.5rem rgba(0, 0, 0, 0.1);
-}
-.App .test a:active span {
-  display: block;
+.navbar a:hover {
+  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
   transform: scale(0.98);
+}
+.navbar .active {
+  box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  transform: scale(0.96);
 }
