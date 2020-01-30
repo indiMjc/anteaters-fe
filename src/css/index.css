@@ -27,7 +27,7 @@
   align-items: center;
   background-color: #ebf5fc;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 2rem;
   border: 1px solid #dae2e96b;
   border-radius: 0.7rem;
   box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
@@ -42,12 +42,13 @@
     flex-direction: column;
     height: 80vh;
     padding: 2rem;
-    margin: 0 auto;
+    margin: 0 2rem 0;
   }
 }
 .navbar a {
   height: 3rem;
-  width: 9rem;
+  min-width: 7.5rem;
+  max-width: 7.5rem;
   font-size: 0.8rem;
   color: teal;
   font-weight: bolder;
