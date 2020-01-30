@@ -55,6 +55,10 @@
 			transform: scale(0.98);
 		}
 
+		&:focus {
+			box-shadow: @active-shadow;
+		}
+
 		@media @tablet {
 			// width: 5rem;
 			// padding: 0.5rem 0.7rem;
@@ -73,11 +77,15 @@
 		border: @subtle-border;
 		height: 1rem;
 		padding: 1rem;
-		box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+		box-shadow: @active-shadow;
+
+		&:focus {
+			outline: none;
+		}
 	}
 
 	.active {
-		box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+		box-shadow: @active-shadow;
 		transform: scale(0.96);
 	}
 }

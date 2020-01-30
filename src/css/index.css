@@ -63,6 +63,9 @@
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
   transform: scale(0.98);
 }
+.navbar a:focus {
+  box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
 @media (max-width: 1150px) {
   .navbar a {
     margin: 0.5rem auto;
@@ -81,6 +84,9 @@
   height: 1rem;
   padding: 1rem;
   box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
+.navbar .search-bar:focus {
+  outline: none;
 }
 .navbar .active {
   box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
