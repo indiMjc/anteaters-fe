@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Hamburger = props => {
+	const setVisibility = () => {
+		props.showNav();
+		props.hideHamburger();
+	};
+
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -8,8 +13,8 @@ const Hamburger = props => {
 			height='80'
 			fill='none'
 			viewBox='0 0 37 23'
-			className='hamburger'
-			onClick={props.onClick}
+			className={`hamburger ${props.hamburgerClass}`}
+			onClick={setVisibility}
 		>
 			<path stroke='#fff' strokeWidth='3' d='M0 1.5L37 1.5'></path>
 			<path stroke='#fff' strokeWidth='3' d='M0 11.5L29 11.5'></path>
