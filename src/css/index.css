@@ -24,6 +24,7 @@
 .hamburger {
   display: none;
   position: absolute;
+  z-index: -1;
   top: 0.9rem;
   left: 3rem;
   filter: invert(30%) sepia(95%) saturate(948%) hue-rotate(146deg) brightness(95%) contrast(102%);
@@ -36,7 +37,6 @@
 }
 .navbar {
   z-index: 1;
-  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
