@@ -2,6 +2,9 @@
 
 html {
 	background: @bg-color;
+	::-webkit-scrollbar {
+		display: none;
+	}
 	.App {
 		position: absolute;
 		z-index: -1;
@@ -11,7 +14,6 @@ html {
 		min-height: 100vh;
 		width: 100vw;
 		font-family: 'Raleway', sans-serif;
-		// overflow: hidden;
 
 		// .body {
 		// 	min-height: 100vh;
