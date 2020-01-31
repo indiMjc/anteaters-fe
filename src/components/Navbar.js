@@ -30,6 +30,9 @@ const Navbar = props => {
 			<NavLink to={'/my_replies'} onClick={props.close}>
 				My Replies
 			</NavLink>
+			<NavLink to={'/menu'} onClick={props.close}>
+				Menu
+			</NavLink>
 		</div>
 	);
 };

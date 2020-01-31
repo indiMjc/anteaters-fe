@@ -10,13 +10,15 @@
   font-display: swap;
   src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
 }
-.App {
+html {
+  background: #ebf5fc;
+}
+html .App {
   position: absolute;
   z-index: -1;
   font-size: 62.5%;
   text-align: center;
   padding-top: 1.5rem;
-  background: #ebf5fc;
   min-height: 100vh;
   width: 100vw;
   font-family: 'Raleway', sans-serif;
@@ -40,10 +42,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10rem;
+  min-height: 8rem;
   width: 95vw;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 3rem;
   background-color: #ebf5fc;
   border: 1px solid #dae2e96b;
   border-radius: 0.7rem;
@@ -56,7 +58,6 @@
   .navbar {
     flex-direction: column;
     width: 19rem;
-    height: 80vh;
     padding: 2rem;
     margin: 0 0 0 2rem;
   }
@@ -114,13 +115,14 @@
 }
 .navbar a {
   height: 3rem;
-  min-width: 7.5rem;
-  max-width: 7.5rem;
+  min-width: 7rem;
+  max-width: 7rem;
   font-size: 0.9rem;
   color: #1fd8f4;
   font-weight: bolder;
   text-decoration: none;
-  padding: 1rem 1rem;
+  line-height: 1.5;
+  padding: 0.7rem;
   background-color: #ebf5fc;
   border: 1px solid #dae2e96b;
   border-radius: 0.4rem;
@@ -135,7 +137,7 @@
 }
 @media (max-width: 1150px) {
   .navbar a {
-    margin: 0.5rem auto;
+    margin: 3rem auto 0;
     font-size: 0.7rem;
   }
 }

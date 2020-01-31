@@ -7,11 +7,11 @@
 	justify-content: space-between;
 	align-items: center;
 
-	height: 10rem;
+	min-height: 8rem;
 	width: 95vw;
 
 	margin: 0 auto;
-	padding: 0 4rem;
+	padding: 0 3rem;
 
 	background-color: @bg-color;
 
@@ -28,7 +28,7 @@
 		flex-direction: column;
 
 		width: 19rem;
-		height: 80vh;
+		// min-height: auto;
 
 		padding: 2rem;
 		margin: 0 0 0 2rem;
@@ -97,15 +97,16 @@
 
 	a {
 		height: 3rem;
-		min-width: 7.5rem;
-		max-width: 7.5rem;
+		min-width: 7rem;
+		max-width: 7rem;
 
 		font-size: 0.9rem;
 		color: @txt-color;
 		font-weight: bolder;
 		text-decoration: none;
+		line-height: 1.5;
 
-		padding: 1rem 1rem;
+		padding: 0.7rem;
 
 		background-color: @bg-color;
 
@@ -124,7 +125,7 @@
 		}
 
 		@media @tablet {
-			margin: 0.5rem auto;
+			margin: 3rem auto 0;
 			font-size: 0.7rem;
 		}
 	}
