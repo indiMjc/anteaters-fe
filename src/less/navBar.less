@@ -1,15 +1,16 @@
 .navbar {
-	height: 10rem;
-	width: 95vw;
-
+	position: absolute;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: @bg-color;
+	height: 10rem;
+	width: 95vw;
 
 	margin: 0 auto;
 	padding: 0 4rem;
+
+	background-color: @bg-color;
 
 	border: 1px solid @subtle-border;
 	border-radius: 0.7rem;
@@ -21,13 +22,13 @@
 	}
 
 	@media @tablet {
-		width: 19rem;
 		flex-direction: column;
 
+		width: 19rem;
 		height: 80vh;
 
 		padding: 2rem;
-		margin: 0 2rem 0;
+		margin: 0 0 0 2rem;
 	}
 
 	a {
@@ -40,9 +41,9 @@
 		font-weight: bolder;
 		text-decoration: none;
 
-		background-color: @bg-color;
-
 		padding: 1rem 1rem;
+
+		background-color: @bg-color;
 
 		border: 1px solid @subtle-border;
 		border-radius: 0.4rem;
@@ -131,20 +132,60 @@
 	}
 }
 
-// @media @tablet {
-// 	.closed {
-// 		position: absolute;
-// 		// top: -50rem;
-// 		// left: 0;
-// 		transform: translateY(-60rem);
-// 		transition-duration: 0.5s;
-// 	}
+@media @tablet {
+	.closed {
+		height: 0px;
+		width: 0px;
+		padding: 0px;
+		margin: 0px;
+		transition-duration: 0.5s;
+		border: none;
+		box-shadow: none;
 
-// 	.open {
-// 		position: relative;
-// 		top: 2rem;
-// 		left: 0;
-// 		transform: translateY(60rem);
-// 		transition-duration: 0.5s;
-// 	}
-// }
+		.bar {
+			height: 0px;
+			width: 0px;
+			padding: 0px;
+			margin: 0px;
+
+			.search {
+				height: 0px;
+				width: 0px;
+				padding: 0px;
+				margin: 0px;
+				border: none;
+			}
+			.search-btn {
+				height: 0px;
+				width: 0px;
+				padding: 0px;
+				margin: 0px;
+				border: none;
+
+				.icon {
+					height: 0px;
+					width: 0px;
+					padding: 0px;
+					margin: 0px;
+				}
+			}
+		}
+		a {
+			height: 0px;
+			width: 0px;
+			padding: 0px;
+			margin: 0px;
+			font-size: 0px;
+			box-shadow: none;
+			border: none;
+		}
+	}
+
+	.open {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		transform: translateY(30rem);
+		transition-duration: 0.5s;
+	}
+}
