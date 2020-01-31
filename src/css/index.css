@@ -19,6 +19,12 @@
   width: 100vw;
   font-family: 'Raleway', sans-serif;
 }
+.hamburger {
+  top: 0;
+  left: 3rem;
+  filter: invert(30%) sepia(95%) saturate(948%) hue-rotate(146deg) brightness(95%) contrast(102%);
+  cursor: pointer;
+}
 .navbar {
   height: 10rem;
   width: 80vw;
@@ -38,7 +44,7 @@
 }
 @media (max-width: 1150px) {
   .navbar {
-    width: 20vw;
+    width: 19rem;
     flex-direction: column;
     height: 80vh;
     padding: 2rem;
@@ -50,7 +56,7 @@
   min-width: 7.5rem;
   max-width: 7.5rem;
   font-size: 0.8rem;
-  color: teal;
+  color: #1fdaf5;
   font-weight: bolder;
   text-decoration: none;
   background-color: #ebf5fc;
@@ -88,7 +94,24 @@
 .navbar .search-bar:focus {
   outline: none;
 }
+@media (max-width: 1150px) {
+  .navbar .search-bar {
+    width: 10rem;
+  }
+}
 .navbar .active {
   box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
   transform: scale(0.96);
+}
+@media (max-width: 1150px) {
+  .closed {
+    position: absolute;
+    transform: translateY(-60rem);
+    transition-duration: 0.5s;
+  }
+  .open {
+    position: absolute;
+    transform: translateY(60rem);
+    transition-duration: 0.5s;
+  }
 }

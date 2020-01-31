@@ -22,7 +22,7 @@
 	}
 
 	@media @tablet {
-		width: 20vw;
+		width: 19rem;
 		flex-direction: column;
 
 		height: 80vh;
@@ -37,7 +37,7 @@
 		max-width: 7.5rem;
 
 		font-size: 0.8rem;
-		color: teal;
+		color: @txt-color;
 		font-weight: bolder;
 		text-decoration: none;
 
@@ -82,10 +82,32 @@
 		&:focus {
 			outline: none;
 		}
+
+		@media @tablet {
+			width: 10rem;
+		}
 	}
 
 	.active {
 		box-shadow: @active-shadow;
 		transform: scale(0.96);
+	}
+}
+
+@media @tablet {
+	.closed {
+		position: absolute;
+		// top: -50rem;
+		// left: 0;
+		transform: translateY(-60rem);
+		transition-duration: 0.5s;
+	}
+
+	.open {
+		position: absolute;
+		// top: 2rem;
+		// left: 0;
+		transform: translateY(60rem);
+		transition-duration: 0.5s;
 	}
 }
