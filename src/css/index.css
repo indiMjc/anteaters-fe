@@ -133,17 +133,3 @@
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
   transform: scale(0.96);
 }
-@media (max-width: 1150px) {
-  .closed {
-    position: absolute;
-    transform: translateY(-60rem);
-    transition-duration: 0.5s;
-  }
-  .open {
-    position: relative;
-    top: 2rem;
-    left: 0;
-    transform: translateY(60rem);
-    transition-duration: 0.5s;
-  }
-}
