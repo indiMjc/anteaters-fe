@@ -1,12 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import icon from '../img/search-icon-light-blue.png';
 
 // search, home, all projects, my projects, my tickets, my replies
 
 const Navbar = props => {
 	return (
 		<div className={`navbar ${props.navClass}`}>
-			<input type='search' name='search' placeholder='Search' className='search-bar' />
+			<div className='bar'>
+				<input type='search' name='search' placeholder='Search' className='search' />
+				<div className='search-btn'>
+					<img src={icon} className='icon' alt='search button' />
+				</div>
+			</div>
 			<NavLink exact={true} to={'/'}>
 				Home
 			</NavLink>

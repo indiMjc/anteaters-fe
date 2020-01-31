@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Hamburger from './components/Hamburger';
 
 const App = props => {
-	const [menuClass, setMenuClass] = useState('closed');
+	const [menuClass, setMenuClass] = useState('open');
 
 	const navClick = () => {
 		const css = menuClass === 'closed' ? 'opened' : 'closed';
@@ -13,8 +13,10 @@ const App = props => {
 
 	return (
 		<div className='App'>
-			<Navbar {...props} navClass={menuClass} />
-			<Hamburger onClick={navClick} />
+			<div className='nav'>
+				<Navbar {...props} navClass={menuClass} />
+				<Hamburger onClick={navClick} />
+			</div>
 		</div>
 	);
 };
