@@ -9,7 +9,7 @@
 	background-color: @bg-color;
 
 	margin: 0 auto;
-	padding: 0 4rem;
+	padding: 0 2rem;
 
 	border: 1px solid @subtle-border;
 	border-radius: 0.7rem;
@@ -22,19 +22,22 @@
 	}
 
 	@media @tablet {
-		max-width: 100vw;
+		width: 19rem;
 		flex-direction: column;
 
+		height: 80vh;
+
 		padding: 2rem;
-		margin: 2rem auto;
+		margin: 0 2rem 0;
 	}
 
 	a {
 		height: 3rem;
-		width: 9rem;
+		min-width: 7.5rem;
+		max-width: 7.5rem;
 
 		font-size: 0.8rem;
-		color: teal;
+		color: @txt-color;
 		font-weight: bolder;
 		text-decoration: none;
 
@@ -52,9 +55,14 @@
 			transform: scale(0.98);
 		}
 
+		&:focus {
+			box-shadow: @active-shadow;
+		}
+
 		@media @tablet {
 			// width: 5rem;
 			// padding: 0.5rem 0.7rem;
+			margin: 0.5rem auto;
 			font-size: 0.7rem;
 		}
 
@@ -64,8 +72,42 @@
 		}
 	}
 
+	.search-bar {
+		border-radius: 1rem;
+		border: @subtle-border;
+		height: 1rem;
+		padding: 1rem;
+		box-shadow: @active-shadow;
+
+		&:focus {
+			outline: none;
+		}
+
+		@media @tablet {
+			width: 10rem;
+		}
+	}
+
 	.active {
-		box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+		box-shadow: @active-shadow;
 		transform: scale(0.96);
+	}
+}
+
+@media @tablet {
+	.closed {
+		position: absolute;
+		// top: -50rem;
+		// left: 0;
+		transform: translateY(-60rem);
+		transition-duration: 0.5s;
+	}
+
+	.open {
+		position: absolute;
+		// top: 2rem;
+		// left: 0;
+		transform: translateY(60rem);
+		transition-duration: 0.5s;
 	}
 }

@@ -19,6 +19,12 @@
   width: 100vw;
   font-family: 'Raleway', sans-serif;
 }
+.hamburger {
+  top: 0;
+  left: 3rem;
+  filter: invert(30%) sepia(95%) saturate(948%) hue-rotate(146deg) brightness(95%) contrast(102%);
+  cursor: pointer;
+}
 .navbar {
   height: 10rem;
   width: 80vw;
@@ -27,7 +33,7 @@
   align-items: center;
   background-color: #ebf5fc;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 2rem;
   border: 1px solid #dae2e96b;
   border-radius: 0.7rem;
   box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
@@ -38,17 +44,19 @@
 }
 @media (max-width: 1150px) {
   .navbar {
-    max-width: 100vw;
+    width: 19rem;
     flex-direction: column;
+    height: 80vh;
     padding: 2rem;
-    margin: 2rem auto;
+    margin: 0 2rem 0;
   }
 }
 .navbar a {
   height: 3rem;
-  width: 9rem;
+  min-width: 7.5rem;
+  max-width: 7.5rem;
   font-size: 0.8rem;
-  color: teal;
+  color: #1fdaf5;
   font-weight: bolder;
   text-decoration: none;
   background-color: #ebf5fc;
@@ -61,8 +69,12 @@
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
   transform: scale(0.98);
 }
+.navbar a:focus {
+  box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
 @media (max-width: 1150px) {
   .navbar a {
+    margin: 0.5rem auto;
     font-size: 0.7rem;
   }
 }
@@ -72,7 +84,34 @@
     border: 1px solid black;
   }
 }
+.navbar .search-bar {
+  border-radius: 1rem;
+  border: #dae2e96b;
+  height: 1rem;
+  padding: 1rem;
+  box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
+.navbar .search-bar:focus {
+  outline: none;
+}
+@media (max-width: 1150px) {
+  .navbar .search-bar {
+    width: 10rem;
+  }
+}
 .navbar .active {
   box-shadow: inset -6px -6px 10px white, inset 0 0 25px rgba(166, 171, 189, 0.7);
   transform: scale(0.96);
+}
+@media (max-width: 1150px) {
+  .closed {
+    position: absolute;
+    transform: translateY(-60rem);
+    transition-duration: 0.5s;
+  }
+  .open {
+    position: absolute;
+    transform: translateY(60rem);
+    transition-duration: 0.5s;
+  }
 }
