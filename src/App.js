@@ -11,8 +11,12 @@ const App = props => {
 		setMenuClass(css);
 	};
 
+	const fieldClick = () => {
+		const css = menuClass === 'opened' && setMenuClass('closed');
+	};
+
 	return (
-		<div className='App'>
+		<div className='App' onClick={fieldClick}>
 			<Hamburger onClick={navClick} />
 			<div className='nav'>
 				<Navbar {...props} navClass={menuClass} />
