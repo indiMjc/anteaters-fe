@@ -41,7 +41,6 @@
 }
 .navbar:hover {
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
-  transform: scale(0.98);
 }
 @media (max-width: 1150px) {
   .navbar {
@@ -68,10 +67,10 @@
 }
 .navbar a:hover {
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
-  transform: scale(0.98);
 }
 .navbar a:focus {
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  transform: scale(0.98);
 }
 @media (max-width: 1150px) {
   .navbar a {
@@ -131,5 +130,4 @@
 }
 .navbar .bar .active {
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
-  transform: scale(0.96);
 }

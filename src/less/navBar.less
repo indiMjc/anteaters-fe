@@ -18,7 +18,6 @@
 
 	&:hover {
 		box-shadow: @hover-shadow;
-		transform: scale(0.98);
 	}
 
 	@media @tablet {
@@ -52,16 +51,14 @@
 
 		&:hover {
 			box-shadow: @hover-shadow;
-			transform: scale(0.98);
 		}
 
 		&:focus {
 			box-shadow: @active-shadow;
+			transform: scale(0.98);
 		}
 
 		@media @tablet {
-			// width: 5rem;
-			// padding: 0.5rem 0.7rem;
 			margin: 0.5rem auto;
 			font-size: 0.7rem;
 		}
@@ -125,7 +122,6 @@
 
 		.active {
 			box-shadow: @active-shadow;
-			transform: scale(0.96);
 		}
 	}
 }
