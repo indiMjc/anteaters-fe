@@ -12,29 +12,39 @@
 }
 .App {
   position: absolute;
+  z-index: -1;
   font-size: 62.5%;
   text-align: center;
-  padding-top: 10rem;
+  padding-top: 1.5rem;
   background: #ebf5fc;
   min-height: 100vh;
   width: 100vw;
   font-family: 'Raleway', sans-serif;
 }
 .hamburger {
-  top: 0;
+  display: none;
+  position: absolute;
+  top: 0.9rem;
   left: 3rem;
   filter: invert(30%) sepia(95%) saturate(948%) hue-rotate(146deg) brightness(95%) contrast(102%);
   cursor: pointer;
 }
+@media (max-width: 1150px) {
+  .hamburger {
+    display: block;
+  }
+}
 .navbar {
-  height: 10rem;
-  width: 95vw;
+  z-index: 1;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ebf5fc;
+  height: 10rem;
+  width: 95vw;
   margin: 0 auto;
   padding: 0 4rem;
+  background-color: #ebf5fc;
   border: 1px solid #dae2e96b;
   border-radius: 0.7rem;
   box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
@@ -44,44 +54,11 @@
 }
 @media (max-width: 1150px) {
   .navbar {
-    width: 19rem;
     flex-direction: column;
+    width: 19rem;
     height: 80vh;
     padding: 2rem;
-    margin: 0 2rem 0;
-  }
-}
-.navbar a {
-  height: 3rem;
-  min-width: 7.5rem;
-  max-width: 7.5rem;
-  font-size: 0.9rem;
-  color: #1fd8f4;
-  font-weight: bolder;
-  text-decoration: none;
-  background-color: #ebf5fc;
-  padding: 1rem 1rem;
-  border: 1px solid #dae2e96b;
-  border-radius: 0.4rem;
-  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
-}
-.navbar a:hover {
-  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
-}
-.navbar a:focus {
-  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
-  transform: scale(0.98);
-}
-@media (max-width: 1150px) {
-  .navbar a {
-    margin: 0.5rem auto;
-    font-size: 0.7rem;
-  }
-}
-@media (max-width: 800px) {
-  .navbar a {
-    font-size: 0.5rem;
-    border: 1px solid black;
+    margin: 0 0 0 2rem;
   }
 }
 .navbar .bar {
@@ -100,6 +77,10 @@
   box-shadow: inset -3px -3px 4px rgba(166, 171, 189, 0.7), inset 8px 8px 25px #ffffff;
   background: rgba(211, 211, 211, 0.692);
   cursor: pointer;
+}
+.navbar .bar .search-btn:hover {
+  background-color: transparent;
+  background-image: radial-gradient(#c4c4c4, lightgray);
 }
 .navbar .bar .search-btn:active {
   box-shadow: inset -3px -3px 14px #ffffff, inset 8px 8px 10px rgba(166, 171, 189, 0.7);
@@ -130,4 +111,97 @@
 }
 .navbar .bar .active {
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
+.navbar a {
+  height: 3rem;
+  min-width: 7.5rem;
+  max-width: 7.5rem;
+  font-size: 0.9rem;
+  color: #1fd8f4;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  background-color: #ebf5fc;
+  border: 1px solid #dae2e96b;
+  border-radius: 0.4rem;
+  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
+}
+.navbar a:hover {
+  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
+}
+.navbar a:focus {
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  transform: scale(0.98);
+}
+@media (max-width: 1150px) {
+  .navbar a {
+    margin: 0.5rem auto;
+    font-size: 0.7rem;
+  }
+}
+.navbar .close-icon {
+  display: none;
+}
+@media (max-width: 1150px) {
+  .closed {
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    transition-duration: 0.5s;
+    border: none;
+    box-shadow: none;
+  }
+  .closed .bar {
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .closed .bar .search {
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+  }
+  .closed .bar .search-btn {
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+  }
+  .closed .bar .search-btn .icon {
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .closed a {
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+    box-shadow: none;
+    border: none;
+  }
+  .closed .close-icon {
+    height: 0px;
+    width: 0px;
+  }
+  .open {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translateY(30rem);
+    transition-duration: 0.7s;
+  }
+  .navbar .close-icon {
+    display: block;
+    height: 2rem;
+    margin-right: 1.2rem;
+    cursor: pointer;
+  }
 }
