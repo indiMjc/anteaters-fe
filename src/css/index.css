@@ -12,6 +12,7 @@
 }
 .App {
   position: absolute;
+  z-index: -1;
   font-size: 62.5%;
   text-align: center;
   padding-top: 1.5rem;
@@ -22,7 +23,6 @@
 }
 .hamburger {
   display: none;
-  z-index: 1;
   position: absolute;
   top: 0.9rem;
   left: 3rem;
@@ -35,6 +35,7 @@
   }
 }
 .navbar {
+  z-index: 1;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -58,39 +59,6 @@
     height: 80vh;
     padding: 2rem;
     margin: 0 0 0 2rem;
-  }
-}
-.navbar a {
-  height: 3rem;
-  min-width: 7.5rem;
-  max-width: 7.5rem;
-  font-size: 0.9rem;
-  color: #1fd8f4;
-  font-weight: bolder;
-  text-decoration: none;
-  padding: 1rem 1rem;
-  background-color: #ebf5fc;
-  border: 1px solid #dae2e96b;
-  border-radius: 0.4rem;
-  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
-}
-.navbar a:hover {
-  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
-}
-.navbar a:focus {
-  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
-  transform: scale(0.98);
-}
-@media (max-width: 1150px) {
-  .navbar a {
-    margin: 0.5rem auto;
-    font-size: 0.7rem;
-  }
-}
-@media (max-width: 800px) {
-  .navbar a {
-    font-size: 0.5rem;
-    border: 1px solid black;
   }
 }
 .navbar .bar {
@@ -144,6 +112,36 @@
 .navbar .bar .active {
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
 }
+.navbar a {
+  height: 3rem;
+  min-width: 7.5rem;
+  max-width: 7.5rem;
+  font-size: 0.9rem;
+  color: #1fd8f4;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  background-color: #ebf5fc;
+  border: 1px solid #dae2e96b;
+  border-radius: 0.4rem;
+  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
+}
+.navbar a:hover {
+  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
+}
+.navbar a:focus {
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  transform: scale(0.98);
+}
+@media (max-width: 1150px) {
+  .navbar a {
+    margin: 0.5rem auto;
+    font-size: 0.7rem;
+  }
+}
+.navbar .close-icon {
+  display: none;
+}
 @media (max-width: 1150px) {
   .closed {
     height: 0px;
@@ -189,11 +187,21 @@
     box-shadow: none;
     border: none;
   }
+  .closed .close-icon {
+    height: 0px;
+    width: 0px;
+  }
   .open {
     position: absolute;
     left: 0px;
     top: 0px;
     transform: translateY(30rem);
     transition-duration: 0.5s;
+  }
+  .navbar .close-icon {
+    display: block;
+    height: 2rem;
+    margin-right: 1.2rem;
+    cursor: pointer;
   }
 }

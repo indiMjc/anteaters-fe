@@ -7,20 +7,20 @@ const App = props => {
 	const [menuClass, setMenuClass] = useState('closed');
 
 	const navClick = () => {
-		const css = menuClass === 'closed' ? 'opened' : 'closed';
-		setMenuClass(css);
+		setMenuClass(menuClass === 'closed' ? 'opened' : 'closed');
 	};
 
 	const fieldClick = () => {
-		const css = menuClass === 'opened' && setMenuClass('closed');
+		menuClass === 'opened' && setMenuClass('closed');
 	};
 
 	return (
-		<div className='App' onClick={fieldClick}>
+		<div className='App'>
 			<Hamburger onClick={navClick} />
 			<div className='nav'>
-				<Navbar {...props} navClass={menuClass} />
+				<Navbar {...props} navClass={menuClass} close={fieldClick} />
 			</div>
+			<div onClick={fieldClick} className='body' />
 		</div>
 	);
 };
