@@ -25,7 +25,7 @@ const App = props => {
 			<div className='nav'>
 				<Navbar {...props} navClass={menuClass} close={fieldClick} showHamburger={hamburgerClick} />
 			</div>
-			<div onClick={fieldClick} className='body' />
+			{/* <div onClick={fieldClick} className='body' /> */}
 		</div>
 	);
 };

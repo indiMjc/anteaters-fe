@@ -117,9 +117,6 @@ html .App {
     width: 10rem;
   }
 }
-.navbar .bar .active {
-  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
-}
 .navbar a {
   height: 3rem;
   min-width: 7rem;
@@ -140,13 +137,16 @@ html .App {
 }
 .navbar a:focus {
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
-  transform: scale(0.98);
 }
 @media (max-width: 1150px) {
   .navbar a {
     margin: 3rem auto 0;
     font-size: 0.7rem;
   }
+}
+.navbar .active {
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  transform: scale(0.98);
 }
 .navbar .close-icon {
   display: none;
