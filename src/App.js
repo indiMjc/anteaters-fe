@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hamburger from './components/Hamburger';
+import AuthForms from './components/AuthForms';
 
 const App = props => {
 	const [menuClass, setMenuClass] = useState('closed');
@@ -21,6 +22,10 @@ const App = props => {
 
 	return (
 		<div className='App'>
+			<Link to='/auth' className='auth-link'>
+				Sign in/Sign up
+			</Link>
+			<Route exact path='/auth' component={AuthForms} />
 			<Route
 				path='/app'
 				render={() => (
