@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hamburger from './components/Hamburger';
 
@@ -21,11 +21,19 @@ const App = props => {
 
 	return (
 		<div className='App'>
-			<Hamburger showNav={navClick} hideHamburger={hamburgerClick} hamburgerClass={hamburgerVis} />
-			<div className='nav'>
-				<Navbar {...props} navClass={menuClass} close={fieldClick} showHamburger={hamburgerClick} />
-			</div>
-			{/* <div onClick={fieldClick} className='body' /> */}
+			<Route
+				path='/app'
+				render={() => (
+					<Hamburger showNav={navClick} hideHamburger={hamburgerClick} hamburgerClass={hamburgerVis} />
+				)}
+			/>
+			<Route
+				path='/app'
+				render={props => (
+					<Navbar {...props} navClass={menuClass} close={fieldClick} showHamburger={hamburgerClick} />
+				)}
+			/>
+			<div onClick={fieldClick} className='body' />
 		</div>
 	);
 };
