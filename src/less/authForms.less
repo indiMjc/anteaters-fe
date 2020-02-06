@@ -4,7 +4,7 @@
 
 	margin: 0 auto;
 
-	border: 1px solid blue;
+	// border: 1px solid blue;
 
 	.auth-nav {
 		display: flex;
@@ -22,37 +22,38 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: 1px solid red;
+
 			width: 50%;
+
 			margin: 0 5rem 0 0;
-			background-image: linear-gradient(currentColor, currentColor);
+
+			background-size: 0% 6px;
+			transition: background-size 1s;
+		}
+
+		.highlight-login {
+			background-image: linear-gradient(@txt-color, @txt-color);
 			background-position: right bottom;
 			background-repeat: no-repeat;
-			background-size: 0% 2px;
-			transition: background-size 0.5s;
-
-			&:hover,
-			&:focus {
-				background-size: 100% 2px;
-			}
+			background-size: 100% 6px;
 		}
 
 		.register-form-btn {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 100%;
+
 			width: 50%;
-			background-image: linear-gradient(currentColor, currentColor);
+
+			background-size: 0% 6px;
+			transition: background-size 1s;
+		}
+
+		.highlight-register {
+			background-image: linear-gradient(@txt-color, @txt-color);
 			background-position: left bottom;
 			background-repeat: no-repeat;
-			background-size: 0% 2px;
-			transition: background-size 0.5s;
-
-			&:hover,
-			&:focus {
-				background-size: 100% 2px;
-			}
+			background-size: 100% 6px;
 		}
 	}
 }
@@ -67,7 +68,7 @@
 	padding: 3rem;
 	margin: 0 auto;
 
-	border: 1px solid hotpink;
+	// border: 1px solid hotpink;
 
 	h2 {
 		font-size: 1.5rem;
@@ -82,10 +83,14 @@
 
 		width: 25rem;
 
-		padding: 1.5rem 5rem;
-		margin: 0 auto 0;
+		background: rgba(216, 231, 241, 0.288);
 
-		border: 1px solid green;
+		padding: 1.5rem 5rem;
+		margin: 2rem auto 0;
+
+		border-radius: 0.4rem;
+
+		// border: 1px solid green;
 
 		input,
 		select,
@@ -150,7 +155,7 @@
 	.login-form {
 		justify-content: space-evenly;
 
-		height: 100rem;
+		min-height: 35.6rem;
 
 		padding: 2rem 5rem 1rem;
 

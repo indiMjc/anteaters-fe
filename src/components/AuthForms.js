@@ -41,7 +41,7 @@ const AuthForms = () => {
 	};
 
 	return (
-		<div className='auth-forms'>
+		<div className='out-to-in auth-forms'>
 			<div className='auth-nav'>
 				<div className={`login-form-btn ${highlight.login}`}>
 					<button className='main-btn' name='login' onClick={showLogin}>
@@ -54,8 +54,12 @@ const AuthForms = () => {
 					</button>
 				</div>
 			</div>
-			<Login state={visibility.login} />
-			<Register state={visibility.register} />
+			<div>
+				<Login state={visibility.login} />
+			</div>
+			<div>
+				<Register state={visibility.register} />
+			</div>
 		</div>
 	);
 };
