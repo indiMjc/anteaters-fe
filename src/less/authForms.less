@@ -1,0 +1,172 @@
+.auth-forms {
+	min-height: 43.5rem;
+	width: 40%;
+
+	margin: 0 auto;
+
+	// border: 1px solid blue;
+
+	.auth-nav {
+		display: flex;
+		justify-content: space-between;
+
+		min-width: 30%;
+		height: 5rem;
+
+		padding: 0 8rem;
+		margin: 0 auto;
+
+		// border: 1px solid black;
+
+		.login-form-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 50%;
+
+			margin: 0 5rem 0 0;
+
+			background-size: 0% 6px;
+			transition: background-size 1s;
+		}
+
+		.highlight-login {
+			background-image: linear-gradient(@txt-color, @txt-color);
+			background-position: right bottom;
+			background-repeat: no-repeat;
+			background-size: 100% 6px;
+		}
+
+		.register-form-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 50%;
+
+			background-size: 0% 6px;
+			transition: background-size 1s;
+		}
+
+		.highlight-register {
+			background-image: linear-gradient(@txt-color, @txt-color);
+			background-position: left bottom;
+			background-repeat: no-repeat;
+			background-size: 100% 6px;
+		}
+	}
+}
+
+.register-form-contain,
+.login-form-contain {
+	flex-direction: column;
+
+	min-width: 30%;
+	height: 43.5rem;
+
+	padding: 3rem;
+	margin: 0 auto;
+
+	// border: 1px solid hotpink;
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	.register-form,
+	.login-form {
+		display: flex;
+		flex-direction: column;
+
+		font-size: 1.2rem;
+
+		width: 25rem;
+
+		background: rgba(216, 231, 241, 0.288);
+
+		padding: 1.5rem 5rem;
+		margin: 2rem auto 0;
+
+		border-radius: 0.4rem;
+
+		// border: 1px solid green;
+
+		input,
+		select,
+		button {
+			margin: 0 0 3rem 0;
+		}
+
+		button {
+			width: 50%;
+			margin: 0 auto;
+		}
+
+		label {
+			margin: 0 0 1rem 0rem;
+		}
+
+		input {
+			text-align: center;
+
+			border-top-left-radius: 1rem;
+			border-bottom-left-radius: 1rem;
+			border-top-right-radius: 1rem;
+			border-bottom-right-radius: 1rem;
+			border: @subtle-border;
+
+			height: 1rem;
+
+			padding: 1rem;
+
+			box-shadow: @active-shadow;
+
+			&:focus {
+				outline: none;
+			}
+
+			&::placeholder {
+				font-size: 1rem;
+				text-align-last: center;
+			}
+		}
+
+		select {
+			border-top-left-radius: 1rem;
+			border-bottom-left-radius: 1rem;
+			border-top-right-radius: 0.2rem;
+			border-bottom-right-radius: 0.2rem;
+			border: @subtle-border;
+
+			font-size: 1rem;
+			text-align-last: center;
+
+			height: 2rem;
+
+			box-shadow: @active-shadow;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	.login-form {
+		justify-content: space-evenly;
+
+		min-height: 35.6rem;
+
+		padding: 2rem 5rem 1rem;
+
+		// border: 1px solid red;
+
+		input {
+			margin: 0 0 1rem 0;
+		}
+
+		label {
+			margin: 0;
+		}
+	}
+}

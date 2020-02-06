@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hamburger from './components/Hamburger';
+import AuthForms from './components/AuthForms';
 
 const App = props => {
 	const [menuClass, setMenuClass] = useState('closed');
@@ -21,10 +22,22 @@ const App = props => {
 
 	return (
 		<div className='App'>
-			<Hamburger showNav={navClick} hideHamburger={hamburgerClick} hamburgerClass={hamburgerVis} />
-			<div className='nav'>
-				<Navbar {...props} navClass={menuClass} close={fieldClick} showHamburger={hamburgerClick} />
-			</div>
+			<Link to='/auth' className='auth-link'>
+				Sign in/Sign up
+			</Link>
+			<Route exact path='/auth' component={AuthForms} />
+			<Route
+				path='/app'
+				render={() => (
+					<Hamburger showNav={navClick} hideHamburger={hamburgerClick} hamburgerClass={hamburgerVis} />
+				)}
+			/>
+			<Route
+				path='/app'
+				render={props => (
+					<Navbar {...props} navClass={menuClass} close={fieldClick} showHamburger={hamburgerClick} />
+				)}
+			/>
 			<div onClick={fieldClick} className='body' />
 		</div>
 	);

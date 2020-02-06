@@ -89,10 +89,6 @@
 				width: 10rem;
 			}
 		}
-
-		.active {
-			box-shadow: @active-shadow;
-		}
 	}
 
 	a {
@@ -121,13 +117,18 @@
 
 		&:focus {
 			box-shadow: @active-shadow;
-			transform: scale(0.98);
+			// transform: scale(0.98);
 		}
 
 		@media @tablet {
 			margin: 3rem auto 0;
 			font-size: 0.7rem;
 		}
+	}
+
+	.active {
+		box-shadow: @active-shadow;
+		transform: scale(0.98);
 	}
 
 	.close-icon {

@@ -20,22 +20,22 @@ const Navbar = props => {
 					<img src={searchIcon} className='icon' alt='search button' onClick={search} />
 				</div>
 			</div>
-			<NavLink exact={true} to={'/'} onClick={setVisibility}>
+			<NavLink exact={true} to={'/app'} onClick={setVisibility}>
 				Home
 			</NavLink>
-			<NavLink to={'/all_projects'} onClick={setVisibility}>
+			<NavLink to={'/app/all_projects'} onClick={setVisibility}>
 				All Projects
 			</NavLink>
-			<NavLink to={'/my_projects'} onClick={setVisibility}>
+			<NavLink to={'/app/my_projects'} onClick={setVisibility}>
 				My Projects
 			</NavLink>
-			<NavLink to={'/my_tickets'} onClick={setVisibility}>
+			<NavLink to={'/app/my_tickets'} onClick={setVisibility}>
 				My Tickets
 			</NavLink>
-			<NavLink to={'/my_replies'} onClick={setVisibility}>
+			<NavLink to={'/app/my_replies'} onClick={setVisibility}>
 				My Replies
 			</NavLink>
-			<NavLink to={'/menu'} onClick={setVisibility}>
+			<NavLink to={'/app/menu'} onClick={setVisibility}>
 				Menu
 			</NavLink>
 		</div>

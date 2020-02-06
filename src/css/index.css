@@ -13,6 +13,9 @@
 html {
   background: #ebf5fc;
 }
+html ::-webkit-scrollbar {
+  display: none;
+}
 html .App {
   position: absolute;
   z-index: -1;
@@ -22,6 +25,201 @@ html .App {
   min-height: 100vh;
   width: 100vw;
   font-family: 'Raleway', sans-serif;
+}
+.out-to-in {
+  background-color: #ebf5fc;
+  border: 1px solid #dae2e96b;
+  border-radius: 0.4rem;
+  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
+}
+.out-to-in:hover {
+  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
+}
+.main-btn {
+  height: 3rem;
+  min-width: 7rem;
+  max-width: 7rem;
+  font-size: 0.9rem;
+  color: #1fd8f4;
+  font-weight: bolder;
+  text-decoration: none;
+  line-height: 1.5;
+  padding: 0.7rem;
+  background-color: #ebf5fc;
+  border: 1px solid #dae2e96b;
+  border-radius: 0.4rem;
+  box-shadow: -6px -6px 10px #fafbff, 3px 3px 15px rgba(166, 171, 189, 0.5);
+}
+.main-btn:hover {
+  box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
+}
+.main-btn:active {
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  transform: scale(0.98);
+}
+.main-btn:focus {
+  outline: none;
+}
+@media (max-width: 1150px) {
+  .main-btn {
+    margin: 3rem auto 0;
+    font-size: 0.7rem;
+  }
+}
+.auth-forms {
+  min-height: 43.5rem;
+  width: 40%;
+  margin: 0 auto;
+}
+.auth-forms .auth-nav {
+  display: flex;
+  justify-content: space-between;
+  min-width: 30%;
+  height: 5rem;
+  padding: 0 8rem;
+  margin: 0 auto;
+}
+.auth-forms .auth-nav .login-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 5rem 0 0;
+  background-size: 0% 6px;
+  transition: background-size 1s;
+}
+.auth-forms .auth-nav .highlight-login {
+  background-image: linear-gradient(#1fd8f4, #1fd8f4);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 6px;
+}
+.auth-forms .auth-nav .register-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-size: 0% 6px;
+  transition: background-size 1s;
+}
+.auth-forms .auth-nav .highlight-register {
+  background-image: linear-gradient(#1fd8f4, #1fd8f4);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 6px;
+}
+.register-form-contain,
+.login-form-contain {
+  flex-direction: column;
+  min-width: 30%;
+  height: 43.5rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+.register-form-contain h2,
+.login-form-contain h2 {
+  font-size: 1.5rem;
+}
+.register-form-contain .register-form,
+.login-form-contain .register-form,
+.register-form-contain .login-form,
+.login-form-contain .login-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  width: 25rem;
+  background: rgba(216, 231, 241, 0.288);
+  padding: 1.5rem 5rem;
+  margin: 2rem auto 0;
+  border-radius: 0.4rem;
+}
+.register-form-contain .register-form input,
+.login-form-contain .register-form input,
+.register-form-contain .login-form input,
+.login-form-contain .login-form input,
+.register-form-contain .register-form select,
+.login-form-contain .register-form select,
+.register-form-contain .login-form select,
+.login-form-contain .login-form select,
+.register-form-contain .register-form button,
+.login-form-contain .register-form button,
+.register-form-contain .login-form button,
+.login-form-contain .login-form button {
+  margin: 0 0 3rem 0;
+}
+.register-form-contain .register-form button,
+.login-form-contain .register-form button,
+.register-form-contain .login-form button,
+.login-form-contain .login-form button {
+  width: 50%;
+  margin: 0 auto;
+}
+.register-form-contain .register-form label,
+.login-form-contain .register-form label,
+.register-form-contain .login-form label,
+.login-form-contain .login-form label {
+  margin: 0 0 1rem 0rem;
+}
+.register-form-contain .register-form input,
+.login-form-contain .register-form input,
+.register-form-contain .login-form input,
+.login-form-contain .login-form input {
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: #dae2e96b;
+  height: 1rem;
+  padding: 1rem;
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
+.register-form-contain .register-form input:focus,
+.login-form-contain .register-form input:focus,
+.register-form-contain .login-form input:focus,
+.login-form-contain .login-form input:focus {
+  outline: none;
+}
+.register-form-contain .register-form input::placeholder,
+.login-form-contain .register-form input::placeholder,
+.register-form-contain .login-form input::placeholder,
+.login-form-contain .login-form input::placeholder {
+  font-size: 1rem;
+  text-align-last: center;
+}
+.register-form-contain .register-form select,
+.login-form-contain .register-form select,
+.register-form-contain .login-form select,
+.login-form-contain .login-form select {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  border: #dae2e96b;
+  font-size: 1rem;
+  text-align-last: center;
+  height: 2rem;
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+}
+.register-form-contain .register-form select:focus,
+.login-form-contain .register-form select:focus,
+.register-form-contain .login-form select:focus,
+.login-form-contain .login-form select:focus {
+  outline: none;
+}
+.register-form-contain .login-form,
+.login-form-contain .login-form {
+  justify-content: space-evenly;
+  min-height: 35.6rem;
+  padding: 2rem 5rem 1rem;
+}
+.register-form-contain .login-form input,
+.login-form-contain .login-form input {
+  margin: 0 0 1rem 0;
+}
+.register-form-contain .login-form label,
+.login-form-contain .login-form label {
+  margin: 0;
 }
 .hamburger {
   display: none;
@@ -114,9 +312,6 @@ html .App {
     width: 10rem;
   }
 }
-.navbar .bar .active {
-  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
-}
 .navbar a {
   height: 3rem;
   min-width: 7rem;
@@ -137,13 +332,16 @@ html .App {
 }
 .navbar a:focus {
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
-  transform: scale(0.98);
 }
 @media (max-width: 1150px) {
   .navbar a {
     margin: 3rem auto 0;
     font-size: 0.7rem;
   }
+}
+.navbar .active {
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  transform: scale(0.98);
 }
 .navbar .close-icon {
   display: none;
