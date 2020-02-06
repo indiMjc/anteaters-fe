@@ -73,101 +73,116 @@
 		font-size: 1.5rem;
 	}
 
-	.register-form,
-	.login-form {
-		display: flex;
-		flex-direction: column;
-
-		font-size: 1.2rem;
-
+	.auth-img-filter {
 		width: 25rem;
 
-		background: rgba(216, 231, 241, 0.288);
+		margin: 1rem auto 0;
 
-		padding: 1.5rem 5rem;
-		margin: 2rem auto 0;
+		background-image: url('../img/white-texture.png');
+
+		background-color: rgb(216, 231, 241);
 
 		border-radius: 0.4rem;
 
-		button {
-			margin: 0 0 3rem 0;
-		}
-
-		button {
-			width: 50%;
-			margin: 0 auto;
-		}
-
-		label {
-			margin: 0 0 1rem 0rem;
-		}
-
-		input {
-			text-align: center;
-
-			border-top-left-radius: 1rem;
-			border-bottom-left-radius: 1rem;
-			border-top-right-radius: 1rem;
-			border-bottom-right-radius: 1rem;
-			border: @subtle-border;
-
-			height: 1rem;
-
-			padding: 1rem;
-
-			box-shadow: @active-shadow;
-
-			&:focus {
-				outline: none;
-			}
-
-			&::placeholder {
-				font-size: 1rem;
-				text-align-last: center;
-			}
-		}
-
-		select {
-			border-top-left-radius: 1rem;
-			border-bottom-left-radius: 1rem;
-			border-top-right-radius: 0.2rem;
-			border-bottom-right-radius: 0.2rem;
-			border: @subtle-border;
-
-			font-size: 1rem;
-			text-align-last: center;
-
-			height: 2rem;
-
-			box-shadow: @active-shadow;
-
-			&:focus {
-				outline: none;
-			}
-		}
-	}
-
-	.login-form {
-		justify-content: space-evenly;
-
-		min-height: 35.3rem;
-
-		padding: 2rem 5rem 1rem;
-
-		input {
-			margin: 0 0 1rem 0;
-		}
-
-		label {
-			margin: 0;
-		}
-	}
-
-	@media @tablet {
 		.register-form,
 		.login-form {
-			width: 19rem;
-			padding: 1.5rem 3rem;
+			display: flex;
+			flex-direction: column;
+
+			font-size: 1.2rem;
+
+			width: 25rem;
+
+			background-color: rgba(216, 231, 241, 0.788);
+
+			padding: 1.5rem 5rem;
+
+			border-radius: 0.4rem;
+
+			button {
+				margin: 0 0 3rem 0;
+			}
+
+			button {
+				width: 50%;
+				margin: 0 auto;
+			}
+
+			label {
+				margin: 0 0 1rem 0rem;
+			}
+
+			input {
+				text-align: center;
+
+				border-top-left-radius: 1rem;
+				border-bottom-left-radius: 1rem;
+				border-top-right-radius: 1rem;
+				border-bottom-right-radius: 1rem;
+				border: @subtle-border;
+
+				height: 1rem;
+
+				padding: 1rem;
+
+				box-shadow: @active-shadow;
+
+				&:focus {
+					outline: none;
+				}
+
+				&::placeholder {
+					font-size: 1rem;
+					text-align-last: center;
+				}
+			}
+
+			select {
+				border-top-left-radius: 1rem;
+				border-bottom-left-radius: 1rem;
+				border-top-right-radius: 0.2rem;
+				border-bottom-right-radius: 0.2rem;
+				border: @subtle-border;
+
+				font-size: 1rem;
+				text-align-last: center;
+
+				height: 2rem;
+
+				box-shadow: @active-shadow;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		.login-form {
+			justify-content: space-evenly;
+
+			min-height: 34.7rem;
+
+			padding: 2rem 5rem 1rem;
+
+			input {
+				margin: 0 0 1rem 0;
+			}
+
+			label {
+				margin: 0;
+			}
+		}
+
+		@media @tablet {
+			.auth-img-filter {
+				width: 19rem;
+
+				.register-form,
+				.login-form {
+					width: 19rem;
+					padding: 1.5rem 3rem;
+				}
+			}
 		}
 	}
 }
