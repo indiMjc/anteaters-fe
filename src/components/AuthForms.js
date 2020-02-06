@@ -10,12 +10,21 @@ const AuthForms = () => {
 		login: 'none',
 		register: 'flex'
 	});
-	console.log(' : AuthForms -> visibility', visibility.register);
 
-	const showLogin = () => {
+	const [highlight, setHighlight] = useState({
+		login: '',
+		register: 'highlight-register'
+	});
+
+	const showLogin = e => {
 		setVisibility({
 			login: 'flex',
 			register: 'none'
+		});
+
+		setHighlight({
+			login: 'highlight-login',
+			register: ''
 		});
 	};
 
@@ -24,17 +33,26 @@ const AuthForms = () => {
 			login: 'none',
 			register: 'flex'
 		});
+
+		setHighlight({
+			login: '',
+			register: 'highlight-register'
+		});
 	};
 
 	return (
 		<div className='auth-forms'>
 			<div className='auth-nav'>
-				<button className='main-btn' onClick={showLogin}>
-					Login
-				</button>
-				<button className='main-btn' onClick={showRegister}>
-					Register
-				</button>
+				<div className={`login-form-btn ${highlight.login}`}>
+					<button className='main-btn' name='login' onClick={showLogin}>
+						Login
+					</button>
+				</div>
+				<div className={`register-form-btn ${highlight.register}`}>
+					<button className='main-btn' name='register' onClick={showRegister}>
+						Register
+					</button>
+				</div>
 			</div>
 			<Login state={visibility.login} />
 			<Register state={visibility.register} />
