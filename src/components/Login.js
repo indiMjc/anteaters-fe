@@ -7,11 +7,11 @@ const Login = ({ state }) => {
 			<form className='login-form'>
 				<label>Username</label>
 				<input type='text' name='username' />
-				<p className='error-text'>error txt here</p>
+				<p className='error-text'></p>
 
 				<label>Password</label>
 				<input type='password' name='password' />
-				<p className='error-text'>error txt here</p>
+				<p className='error-text'></p>
 
 				<button className='main-btn'>Submit</button>
 			</form>

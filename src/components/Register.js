@@ -7,15 +7,15 @@ const Register = ({ state }) => {
 			<form className='register-form'>
 				<label>Email</label>
 				<input type='text' name='email' />
-				<p className='error-text'>error txt here</p>
+				<p className='error-text'></p>
 
 				<label>Username</label>
 				<input type='text' name='username' />
-				<p className='error-text'>error txt here</p>
+				<p className='error-text'></p>
 
 				<label>Password</label>
 				<input type='password' name='password' />
-				<p className='error-text'>error txt here</p>
+				<p className='error-text'></p>
 
 				<label>I am a...</label>
 				<select className='user-select' name='role' defaultValue=''>
@@ -25,7 +25,7 @@ const Register = ({ state }) => {
 					<option value='user'>User</option>
 					<option value='developer'>Developer</option>
 				</select>
-				<p className='error-text'>error txt here</p>
+				<p className='error-text'></p>
 
 				<button className='main-btn'>Submit</button>
 			</form>

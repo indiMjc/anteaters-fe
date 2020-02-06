@@ -36,6 +36,7 @@ html .App {
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
 }
 .error-text {
+  height: 0.8rem;
   font-size: 0.8rem;
   margin: 0 0 2rem 0;
 }
@@ -73,7 +74,7 @@ html .App {
 }
 .auth-forms {
   min-height: 43.5rem;
-  width: 40%;
+  width: 34rem;
   margin: 0 auto;
 }
 .auth-forms .auth-nav {
@@ -89,7 +90,7 @@ html .App {
   justify-content: center;
   align-items: center;
   width: 50%;
-  margin: 0 5rem 0 0;
+  margin: 0 2.5rem 0 0;
   background-size: 0% 6px;
   transition: background-size 1s;
 }
@@ -104,6 +105,7 @@ html .App {
   justify-content: center;
   align-items: center;
   width: 50%;
+  margin: 0 0 0 2.5rem;
   background-size: 0% 6px;
   transition: background-size 1s;
 }
