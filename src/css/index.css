@@ -35,6 +35,10 @@ html .App {
 .out-to-in:hover {
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
 }
+.error-text {
+  font-size: 0.8rem;
+  margin: 0 0 2rem 0;
+}
 .main-btn {
   height: 3rem;
   min-width: 7rem;
@@ -134,14 +138,6 @@ html .App {
   margin: 2rem auto 0;
   border-radius: 0.4rem;
 }
-.register-form-contain .register-form input,
-.login-form-contain .register-form input,
-.register-form-contain .login-form input,
-.login-form-contain .login-form input,
-.register-form-contain .register-form select,
-.login-form-contain .register-form select,
-.register-form-contain .login-form select,
-.login-form-contain .login-form select,
 .register-form-contain .register-form button,
 .login-form-contain .register-form button,
 .register-form-contain .login-form button,
@@ -211,7 +207,7 @@ html .App {
 .register-form-contain .login-form,
 .login-form-contain .login-form {
   justify-content: space-evenly;
-  min-height: 35.6rem;
+  min-height: 35.3rem;
   padding: 2rem 5rem 1rem;
 }
 .register-form-contain .login-form input,
