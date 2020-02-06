@@ -4,8 +4,6 @@
 
 	margin: 0 auto;
 
-	// border: 1px solid blue;
-
 	.auth-nav {
 		display: flex;
 		justify-content: space-between;
@@ -13,10 +11,7 @@
 		min-width: 30%;
 		height: 5rem;
 
-		// padding: 0 0rem;
 		margin: 0 0.5rem;
-
-		// border: 1px solid black;
 
 		.login-form-btn {
 			display: flex;
@@ -56,7 +51,11 @@
 	}
 
 	@media @tablet {
-		min-width: 40vw;
+		min-width: 30vw;
+	}
+
+	@media @md-mobile {
+		width: 25rem;
 	}
 }
 
@@ -69,8 +68,6 @@
 
 	padding: 3rem;
 	margin: 0 auto;
-
-	// border: 1px solid hotpink;
 
 	h2 {
 		font-size: 1.5rem;
@@ -157,8 +154,6 @@
 
 		padding: 2rem 5rem 1rem;
 
-		// border: 1px solid red;
-
 		input {
 			margin: 0 0 1rem 0;
 		}
@@ -168,14 +163,11 @@
 		}
 	}
 
-	// @media @tablet {
-	// 	.register-form-contain,
-	// 	.login-form-contain {
-	// 		min-width: 100%;
-	// 		.register-form,
-	// 		.login-form {
-	// 			max-width: 100% !important;
-	// 		}
-	// 	}
-	// }
+	@media @tablet {
+		.register-form,
+		.login-form {
+			width: 19rem;
+			padding: 1.5rem 3rem;
+		}
+	}
 }
