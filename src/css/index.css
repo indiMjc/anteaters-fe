@@ -66,15 +66,9 @@ html .App {
 .main-btn:focus {
   outline: none;
 }
-@media (max-width: 1150px) {
-  .main-btn {
-    margin: 3rem auto 0;
-    font-size: 0.7rem;
-  }
-}
 .auth-forms {
   min-height: 43.5rem;
-  width: 34rem;
+  max-width: 34rem;
   margin: 0 auto;
 }
 .auth-forms .auth-nav {
@@ -82,15 +76,13 @@ html .App {
   justify-content: space-between;
   min-width: 30%;
   height: 5rem;
-  padding: 0 8rem;
-  margin: 0 auto;
+  margin: 0 0.5rem;
 }
 .auth-forms .auth-nav .login-form-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
-  margin: 0 2.5rem 0 0;
   background-size: 0% 6px;
   transition: background-size 1s;
 }
@@ -105,7 +97,6 @@ html .App {
   justify-content: center;
   align-items: center;
   width: 50%;
-  margin: 0 0 0 2.5rem;
   background-size: 0% 6px;
   transition: background-size 1s;
 }
