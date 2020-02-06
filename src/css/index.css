@@ -108,7 +108,12 @@ html .App {
 }
 @media (max-width: 1150px) {
   .auth-forms {
-    min-width: 40vw;
+    min-width: 30vw;
+  }
+}
+@media (max-width: 500px) {
+  .auth-forms {
+    width: 25rem;
   }
 }
 .register-form-contain,
@@ -215,6 +220,15 @@ html .App {
 .register-form-contain .login-form label,
 .login-form-contain .login-form label {
   margin: 0;
+}
+@media (max-width: 1150px) {
+  .register-form-contain .register-form,
+  .login-form-contain .register-form,
+  .register-form-contain .login-form,
+  .login-form-contain .login-form {
+    width: 19rem;
+    padding: 1.5rem 3rem;
+  }
 }
 .hamburger {
   display: none;
