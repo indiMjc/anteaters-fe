@@ -1,0 +1,109 @@
+.auth-forms {
+	border: 1px solid black;
+	min-height: 43.5rem;
+	width: 40%;
+	// padding: 3rem 0 0;
+	margin: 0 auto;
+
+	.auth-nav {
+		display: flex;
+		border: 1px solid black;
+		justify-content: space-between;
+		min-width: 30%;
+		padding: 1rem 8rem;
+		margin: 0 auto;
+	}
+}
+
+.register-form-contain,
+.login-form-contain {
+	border: 1px solid black;
+	min-width: 30%;
+	padding: 3rem;
+	height: 43.5rem;
+
+	margin: 0 auto;
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	.register-form,
+	.login-form {
+		display: flex;
+		flex-direction: column;
+
+		font-size: 1.2rem;
+
+		width: 25rem;
+
+		margin: 0 auto 0;
+		padding: 3rem 5rem;
+
+		border: 1px solid green;
+
+		input,
+		select,
+		button {
+			margin: 0 0 3rem 0;
+		}
+
+		button {
+			width: 50%;
+			margin: 0 auto;
+		}
+
+		label {
+			margin: 0 0 1rem 0rem;
+		}
+
+		input {
+			text-align: center;
+
+			border-top-left-radius: 1rem;
+			border-bottom-left-radius: 1rem;
+			border-top-right-radius: 1rem;
+			border-bottom-right-radius: 1rem;
+			border: @subtle-border;
+
+			height: 1rem;
+			padding: 1rem;
+
+			box-shadow: @active-shadow;
+
+			&:focus {
+				outline: none;
+			}
+
+			&::placeholder {
+				font-size: 1rem;
+				text-align-last: center;
+			}
+		}
+
+		select {
+			border-top-left-radius: 1rem;
+			border-bottom-left-radius: 1rem;
+			border-top-right-radius: 0.2rem;
+			border-bottom-right-radius: 0.2rem;
+			border: @subtle-border;
+
+			font-size: 1rem;
+			text-align-last: center;
+
+			height: 2rem;
+
+			box-shadow: @active-shadow;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	.login-form {
+		border: 1px solid red;
+		height: 103.5%;
+		justify-content: space-between;
+	}
+}

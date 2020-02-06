@@ -1,0 +1,38 @@
+.main-btn {
+	height: 3rem;
+	min-width: 7rem;
+	max-width: 7rem;
+
+	font-size: 0.9rem;
+	color: @txt-color;
+	font-weight: bolder;
+	text-decoration: none;
+	line-height: 1.5;
+
+	padding: 0.7rem;
+
+	background-color: @bg-color;
+
+	border: 1px solid @subtle-border;
+	border-radius: 0.4rem;
+
+	box-shadow: @box-shadow;
+
+	&:hover {
+		box-shadow: @hover-shadow;
+	}
+
+	&:active {
+		box-shadow: @active-shadow;
+		transform: scale(0.98);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	@media @tablet {
+		margin: 3rem auto 0;
+		font-size: 0.7rem;
+	}
+}
