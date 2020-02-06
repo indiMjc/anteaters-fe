@@ -17,7 +17,7 @@ const Register = ({ state }) => {
 						Select role
 					</option>
 					<option value='user'>User</option>
-					<option value='developer'>developer</option>
+					<option value='developer'>Developer</option>
 				</select>
 				<button className='main-btn'>Submit</button>
 			</form>
