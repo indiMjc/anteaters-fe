@@ -128,42 +128,49 @@ html .App {
 .login-form-contain h2 {
   font-size: 1.5rem;
 }
-.register-form-contain .register-form,
-.login-form-contain .register-form,
-.register-form-contain .login-form,
-.login-form-contain .login-form {
+.register-form-contain .auth-img-filter,
+.login-form-contain .auth-img-filter {
+  width: 25rem;
+  margin: 1rem auto 0;
+  background-image: url('../img/white-texture.png');
+  background-color: #d8e7f1;
+  border-radius: 0.4rem;
+}
+.register-form-contain .auth-img-filter .register-form,
+.login-form-contain .auth-img-filter .register-form,
+.register-form-contain .auth-img-filter .login-form,
+.login-form-contain .auth-img-filter .login-form {
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
   width: 25rem;
-  background: rgba(216, 231, 241, 0.288);
+  background-color: rgba(216, 231, 241, 0.788);
   padding: 1.5rem 5rem;
-  margin: 2rem auto 0;
   border-radius: 0.4rem;
 }
-.register-form-contain .register-form button,
-.login-form-contain .register-form button,
-.register-form-contain .login-form button,
-.login-form-contain .login-form button {
+.register-form-contain .auth-img-filter .register-form button,
+.login-form-contain .auth-img-filter .register-form button,
+.register-form-contain .auth-img-filter .login-form button,
+.login-form-contain .auth-img-filter .login-form button {
   margin: 0 0 3rem 0;
 }
-.register-form-contain .register-form button,
-.login-form-contain .register-form button,
-.register-form-contain .login-form button,
-.login-form-contain .login-form button {
+.register-form-contain .auth-img-filter .register-form button,
+.login-form-contain .auth-img-filter .register-form button,
+.register-form-contain .auth-img-filter .login-form button,
+.login-form-contain .auth-img-filter .login-form button {
   width: 50%;
   margin: 0 auto;
 }
-.register-form-contain .register-form label,
-.login-form-contain .register-form label,
-.register-form-contain .login-form label,
-.login-form-contain .login-form label {
+.register-form-contain .auth-img-filter .register-form label,
+.login-form-contain .auth-img-filter .register-form label,
+.register-form-contain .auth-img-filter .login-form label,
+.login-form-contain .auth-img-filter .login-form label {
   margin: 0 0 1rem 0rem;
 }
-.register-form-contain .register-form input,
-.login-form-contain .register-form input,
-.register-form-contain .login-form input,
-.login-form-contain .login-form input {
+.register-form-contain .auth-img-filter .register-form input,
+.login-form-contain .auth-img-filter .register-form input,
+.register-form-contain .auth-img-filter .login-form input,
+.login-form-contain .auth-img-filter .login-form input {
   text-align: center;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -174,23 +181,23 @@ html .App {
   padding: 1rem;
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
 }
-.register-form-contain .register-form input:focus,
-.login-form-contain .register-form input:focus,
-.register-form-contain .login-form input:focus,
-.login-form-contain .login-form input:focus {
+.register-form-contain .auth-img-filter .register-form input:focus,
+.login-form-contain .auth-img-filter .register-form input:focus,
+.register-form-contain .auth-img-filter .login-form input:focus,
+.login-form-contain .auth-img-filter .login-form input:focus {
   outline: none;
 }
-.register-form-contain .register-form input::placeholder,
-.login-form-contain .register-form input::placeholder,
-.register-form-contain .login-form input::placeholder,
-.login-form-contain .login-form input::placeholder {
+.register-form-contain .auth-img-filter .register-form input::placeholder,
+.login-form-contain .auth-img-filter .register-form input::placeholder,
+.register-form-contain .auth-img-filter .login-form input::placeholder,
+.login-form-contain .auth-img-filter .login-form input::placeholder {
   font-size: 1rem;
   text-align-last: center;
 }
-.register-form-contain .register-form select,
-.login-form-contain .register-form select,
-.register-form-contain .login-form select,
-.login-form-contain .login-form select {
+.register-form-contain .auth-img-filter .register-form select,
+.login-form-contain .auth-img-filter .register-form select,
+.register-form-contain .auth-img-filter .login-form select,
+.login-form-contain .auth-img-filter .login-form select {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   border-top-right-radius: 0.2rem;
@@ -201,31 +208,35 @@ html .App {
   height: 2rem;
   box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
 }
-.register-form-contain .register-form select:focus,
-.login-form-contain .register-form select:focus,
-.register-form-contain .login-form select:focus,
-.login-form-contain .login-form select:focus {
+.register-form-contain .auth-img-filter .register-form select:focus,
+.login-form-contain .auth-img-filter .register-form select:focus,
+.register-form-contain .auth-img-filter .login-form select:focus,
+.login-form-contain .auth-img-filter .login-form select:focus {
   outline: none;
 }
-.register-form-contain .login-form,
-.login-form-contain .login-form {
+.register-form-contain .auth-img-filter .login-form,
+.login-form-contain .auth-img-filter .login-form {
   justify-content: space-evenly;
-  min-height: 35.3rem;
+  min-height: 34.7rem;
   padding: 2rem 5rem 1rem;
 }
-.register-form-contain .login-form input,
-.login-form-contain .login-form input {
+.register-form-contain .auth-img-filter .login-form input,
+.login-form-contain .auth-img-filter .login-form input {
   margin: 0 0 1rem 0;
 }
-.register-form-contain .login-form label,
-.login-form-contain .login-form label {
+.register-form-contain .auth-img-filter .login-form label,
+.login-form-contain .auth-img-filter .login-form label {
   margin: 0;
 }
 @media (max-width: 1150px) {
-  .register-form-contain .register-form,
-  .login-form-contain .register-form,
-  .register-form-contain .login-form,
-  .login-form-contain .login-form {
+  .register-form-contain .auth-img-filter .auth-img-filter,
+  .login-form-contain .auth-img-filter .auth-img-filter {
+    width: 19rem;
+  }
+  .register-form-contain .auth-img-filter .auth-img-filter .register-form,
+  .login-form-contain .auth-img-filter .auth-img-filter .register-form,
+  .register-form-contain .auth-img-filter .auth-img-filter .login-form,
+  .login-form-contain .auth-img-filter .auth-img-filter .login-form {
     width: 19rem;
     padding: 1.5rem 3rem;
   }
