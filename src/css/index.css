@@ -113,7 +113,18 @@ html .App {
 }
 @media (max-width: 500px) {
   .auth-forms {
-    width: 25rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+    transform: scale(0.75);
+  }
+  .auth-forms .auth-nav {
+    justify-content: space-evenly;
+    width: 100%;
   }
 }
 .register-form-contain,
@@ -147,12 +158,6 @@ html .App {
   background-color: rgba(216, 231, 241, 0.788);
   padding: 1.5rem 5rem;
   border-radius: 0.4rem;
-}
-.register-form-contain .auth-img-filter .register-form button,
-.login-form-contain .auth-img-filter .register-form button,
-.register-form-contain .auth-img-filter .login-form button,
-.login-form-contain .auth-img-filter .login-form button {
-  margin: 0 0 3rem 0;
 }
 .register-form-contain .auth-img-filter .register-form button,
 .login-form-contain .auth-img-filter .register-form button,
@@ -229,6 +234,11 @@ html .App {
   margin: 0;
 }
 @media (max-width: 1150px) {
+  .register-form-contain .auth-img-filter,
+  .login-form-contain .auth-img-filter {
+    margin: 0 auto;
+    transform: scale(0.75);
+  }
   .register-form-contain .auth-img-filter .auth-img-filter,
   .login-form-contain .auth-img-filter .auth-img-filter {
     width: 19rem;
