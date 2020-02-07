@@ -113,6 +113,8 @@ html .App {
 }
 @media (max-width: 500px) {
   .auth-forms {
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
