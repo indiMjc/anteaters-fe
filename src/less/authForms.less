@@ -1,76 +1,85 @@
-.auth-forms {
-	min-height: 43.5rem;
-	max-width: 34rem;
+.log-reg-forms-contain {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-	margin: 0 auto;
+	height: 90vh;
+	width: 100vw;
 
-	.auth-nav {
-		display: flex;
-		justify-content: space-between;
+	.auth-forms {
+		min-height: 43.5rem;
+		max-width: 34rem;
 
-		min-width: 30%;
-		height: 5rem;
-
-		margin: 0 0.5rem;
-
-		.login-form-btn {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			width: 50%;
-
-			background-size: 0% 6px;
-			transition: background-size 1s;
-		}
-
-		.highlight-login {
-			background-image: linear-gradient(@txt-color, @txt-color);
-			background-position: right bottom;
-			background-repeat: no-repeat;
-			background-size: 100% 6px;
-		}
-
-		.register-form-btn {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			width: 50%;
-
-			background-size: 0% 6px;
-			transition: background-size 1s;
-		}
-
-		.highlight-register {
-			background-image: linear-gradient(@txt-color, @txt-color);
-			background-position: left bottom;
-			background-repeat: no-repeat;
-			background-size: 100% 6px;
-		}
-	}
-
-	@media @tablet {
-		min-width: 30vw;
-	}
-
-	@media @md-mobile {
-		position: absolute;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		width: 100vw;
-
-		margin: 0;
-
-		transform: scale(0.75);
+		margin: 0 auto;
 
 		.auth-nav {
-			justify-content: space-evenly;
+			display: flex;
+			justify-content: space-between;
 
-			width: 100%;
+			min-width: 30%;
+			height: 5rem;
+
+			margin: 0 0.5rem;
+
+			.login-form-btn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				width: 50%;
+
+				background-size: 0% 6px;
+				transition: background-size 1s;
+			}
+
+			.highlight-login {
+				background-image: linear-gradient(@txt-color, @txt-color);
+				background-position: right bottom;
+				background-repeat: no-repeat;
+				background-size: 100% 6px;
+			}
+
+			.register-form-btn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				width: 50%;
+
+				background-size: 0% 6px;
+				transition: background-size 1s;
+			}
+
+			.highlight-register {
+				background-image: linear-gradient(@txt-color, @txt-color);
+				background-position: left bottom;
+				background-repeat: no-repeat;
+				background-size: 100% 6px;
+			}
+		}
+
+		@media @tablet {
+			min-width: 30vw;
+		}
+
+		@media @md-mobile {
+			position: absolute;
+			top: 0;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			width: 100vw;
+
+			margin: 0;
+
+			transform: scale(0.75);
+			.auth-nav {
+				justify-content: space-evenly;
+
+				width: 100%;
+			}
 		}
 	}
 }
@@ -95,7 +104,6 @@
 		margin: 1rem auto 0;
 
 		background-image: url('../img/white-texture.png');
-
 		background-color: rgb(216, 231, 241);
 
 		border-radius: 0.4rem;
@@ -109,9 +117,9 @@
 
 			width: 25rem;
 
-			background-color: rgba(216, 231, 241, 0.788);
-
 			padding: 1.5rem 5rem;
+
+			background-color: rgba(216, 231, 241, 0.788);
 
 			border-radius: 0.4rem;
 
@@ -185,23 +193,22 @@
 			}
 		}
 
-		@media @tablet {
-			margin: 0 auto;
+		@media @md-mobile {
+			position: relative;
+			top: -3rem;
 
 			transform: scale(0.75);
-			.auth-img-filter {
-				width: 19rem;
-
-				.register-form,
-				.login-form {
-					width: 19rem;
-
-					padding: 1.5rem 3rem;
-				}
-			}
 		}
+	}
 
-		@media @md-mobile {
+	@media @md-mobile {
+		max-height: 50vh;
+
+		.auth-img-filter {
+			position: relative;
+			top: -3rem;
+
+			transform: scale(0.75);
 		}
 	}
 }

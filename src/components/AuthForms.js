@@ -41,26 +41,28 @@ const AuthForms = () => {
 	};
 
 	return (
-		<div className='out-to-in auth-forms'>
-			<div className='auth-nav'>
-				<div className={`login-form-btn ${highlight.login}`}>
-					<button className='main-btn' name='login' onClick={showLogin}>
-						Login
-					</button>
+		<section className='log-reg-forms-contain'>
+			<section className='out-to-in auth-forms'>
+				<div className='auth-nav'>
+					<div className={`login-form-btn ${highlight.login}`}>
+						<button className='main-btn' name='login' onClick={showLogin}>
+							Login
+						</button>
+					</div>
+					<div className={`register-form-btn ${highlight.register}`}>
+						<button className='main-btn' name='register' onClick={showRegister}>
+							Register
+						</button>
+					</div>
 				</div>
-				<div className={`register-form-btn ${highlight.register}`}>
-					<button className='main-btn' name='register' onClick={showRegister}>
-						Register
-					</button>
+				<div>
+					<Login state={visibility.login} />
 				</div>
-			</div>
-			<div>
-				<Login state={visibility.login} />
-			</div>
-			<div>
-				<Register state={visibility.register} />
-			</div>
-		</div>
+				<div>
+					<Register state={visibility.register} />
+				</div>
+			</section>
+		</section>
 	);
 };
 
