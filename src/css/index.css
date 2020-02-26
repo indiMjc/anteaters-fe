@@ -386,65 +386,19 @@ html .App {
   display: none;
 }
 @media (max-width: 1150px) {
-  .closed {
-    height: 0px;
-    width: 0px;
-    padding: 0px;
-    margin: 0px;
+  #opened {
+    width: 75%;
+    margin: 0 auto;
     transition-duration: 0.5s;
-    border: none;
-    box-shadow: none;
   }
-  .closed .bar {
-    height: 0px;
-    width: 0px;
-    padding: 0px;
-    margin: 0px;
-  }
-  .closed .bar .search {
-    height: 0px;
-    width: 0px;
-    padding: 0px;
-    margin: 0px;
-    border: none;
-  }
-  .closed .bar .search-btn {
-    height: 0px;
-    width: 0px;
-    padding: 0px;
-    margin: 0px;
-    border: none;
-  }
-  .closed .bar .search-btn .icon {
-    height: 0px;
-    width: 0px;
-    padding: 0px;
-    margin: 0px;
-  }
-  .closed a {
-    height: 0px;
-    width: 0px;
-    padding: 0px;
-    margin: 0px;
-    font-size: 0px;
-    box-shadow: none;
-    border: none;
-  }
-  .closed .close-icon {
-    height: 0px;
-    width: 0px;
-  }
-  .open {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    transform: translateY(30rem);
-    transition-duration: 0.7s;
-  }
-  .navbar .close-icon {
+  #opened .close-icon {
     display: block;
     height: 2rem;
     margin-right: 1.2rem;
     cursor: pointer;
+  }
+  #closed {
+    transform: translateX(-22rem);
+    transition-duration: 0.5s;
   }
 }

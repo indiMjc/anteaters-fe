@@ -1,18 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import searchIcon from '../img/search-icon-light-blue.png';
-import closeIcon from '../img/close-button-light-blue.png';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import searchIcon from '../img/search-icon-light-blue.png'
+import closeIcon from '../img/close-button-light-blue.png'
 
 const Navbar = props => {
 	const setVisibility = () => {
-		props.close();
-		props.showHamburger();
-	};
+		props.close()
+		props.showHamburger()
+	}
 
-	const search = () => setVisibility();
+	const search = () => setVisibility()
 
 	return (
-		<div className={`navbar ${props.navClass}`}>
+		<div className='navbar' id={props.navClass}>
 			<div className='bar'>
 				<img src={closeIcon} className='close-icon' alt='close menu button' onClick={setVisibility} />
 				<input type='search' name='search' placeholder='Search' className='search' />
@@ -39,7 +39,7 @@ const Navbar = props => {
 				Menu
 			</NavLink>
 		</div>
-	);
-};
+	)
+}
 
-export default Navbar;
+export default Navbar

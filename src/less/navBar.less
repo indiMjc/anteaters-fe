@@ -137,71 +137,26 @@
 }
 
 @media @tablet {
-	.closed {
-		height: 0px;
-		width: 0px;
-		padding: 0px;
-		margin: 0px;
+	#opened {
+		width: 75%;
+
+		margin: 0 auto;
+
 		transition-duration: 0.5s;
-		border: none;
-		box-shadow: none;
-
-		.bar {
-			height: 0px;
-			width: 0px;
-			padding: 0px;
-			margin: 0px;
-
-			.search {
-				height: 0px;
-				width: 0px;
-				padding: 0px;
-				margin: 0px;
-				border: none;
-			}
-			.search-btn {
-				height: 0px;
-				width: 0px;
-				padding: 0px;
-				margin: 0px;
-				border: none;
-
-				.icon {
-					height: 0px;
-					width: 0px;
-					padding: 0px;
-					margin: 0px;
-				}
-			}
-		}
-		a {
-			height: 0px;
-			width: 0px;
-			padding: 0px;
-			margin: 0px;
-			font-size: 0px;
-			box-shadow: none;
-			border: none;
-		}
 
 		.close-icon {
-			height: 0px;
-			width: 0px;
+			display: block;
+
+			height: 2rem;
+
+			margin-right: 1.2rem;
+
+			cursor: pointer;
 		}
 	}
 
-	.open {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		transform: translateY(30rem);
-		transition-duration: 0.7s;
-	}
-
-	.navbar .close-icon {
-		display: block;
-		height: 2rem;
-		margin-right: 1.2rem;
-		cursor: pointer;
+	#closed {
+		transform: translateX(-22rem);
+		transition-duration: 0.5s;
 	}
 }
