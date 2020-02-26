@@ -138,20 +138,33 @@
 
 @media @tablet {
 	#opened {
-		width: 75%;
+		width: 70%;
 
 		margin: 0 auto;
 
 		transition-duration: 0.5s;
 
-		.close-icon {
-			display: block;
+		.bar {
+			width: 100%;
 
-			height: 2rem;
+			.close-icon {
+				display: block;
 
-			margin-right: 1.2rem;
+				height: 2rem;
 
-			cursor: pointer;
+				margin-right: 2.2rem;
+
+				cursor: pointer;
+			}
+		}
+
+		a {
+			min-height: 4rem;
+			min-width: 12rem;
+
+			font-size: 1rem;
+
+			line-height: 2.5rem;
 		}
 	}
 

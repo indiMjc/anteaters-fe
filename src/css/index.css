@@ -387,15 +387,24 @@ html .App {
 }
 @media (max-width: 1150px) {
   #opened {
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
     transition-duration: 0.5s;
   }
-  #opened .close-icon {
+  #opened .bar {
+    width: 100%;
+  }
+  #opened .bar .close-icon {
     display: block;
     height: 2rem;
-    margin-right: 1.2rem;
+    margin-right: 2.2rem;
     cursor: pointer;
+  }
+  #opened a {
+    min-height: 4rem;
+    min-width: 12rem;
+    font-size: 1rem;
+    line-height: 2.5rem;
   }
   #closed {
     transform: translateX(-22rem);
