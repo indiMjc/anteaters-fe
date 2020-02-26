@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Login from './Login';
-import Register from './Register';
+import React, { useState } from 'react'
+import Login from './Login'
+import Register from './Register'
 
 const AuthForms = () => {
 	//
@@ -9,36 +9,36 @@ const AuthForms = () => {
 	const [visibility, setVisibility] = useState({
 		login: 'none',
 		register: 'flex'
-	});
+	})
 
 	const [highlight, setHighlight] = useState({
 		login: '',
 		register: 'highlight-register'
-	});
+	})
 
 	const showLogin = e => {
 		setVisibility({
 			login: 'flex',
 			register: 'none'
-		});
+		})
 
 		setHighlight({
 			login: 'highlight-login',
 			register: ''
-		});
-	};
+		})
+	}
 
 	const showRegister = () => {
 		setVisibility({
 			login: 'none',
 			register: 'flex'
-		});
+		})
 
 		setHighlight({
 			login: '',
 			register: 'highlight-register'
-		});
-	};
+		})
+	}
 
 	return (
 		<section className='log-reg-forms-contain'>
@@ -63,7 +63,7 @@ const AuthForms = () => {
 				</div>
 			</section>
 		</section>
-	);
-};
+	)
+}
 
-export default AuthForms;
+export default AuthForms
