@@ -6,32 +6,29 @@ const initialFormState = {
 	email: '',
 	username: '',
 	password: '',
-	type: ''
+	role: ''
 }
 
-const Register = ({ state, history }) => {
+const Register = props => {
 	const { values: user, handleChange, handleSubmit, errors } = useForm(
 		initialFormState,
 		register,
 		validateRegistration
 	)
-	console.log(
-		'errors %c --> ',
-		'font-size: 20px; color: black; font-weight: bold; background: linear-gradient(red, black); border: 2px solid black; border-radius: 6px;',
-		errors
-	)
 
 	async function register() {
 		try {
-			await axios.post('https://anteaters.herokuapp.com/auth/login', user)
+			const token = await axios.post('https://anteaters.herokuapp.com/auth/register', user)
 
-			history.push('/')
+			localStorage.setItem('uid', token)
+
+			props.history.push('/')
 		} catch (err) {
 			console.log(err)
 		}
 	}
 	return (
-		<div className='register-form-contain' style={{ display: `${state}` }}>
+		<div className='register-form-contain' style={{ display: `${props.state}` }}>
 			<h2>Register</h2>
 			<div className='auth-img-filter'>
 				<form className='register-form' onSubmit={handleSubmit}>
@@ -60,14 +57,7 @@ const Register = ({ state, history }) => {
 					<p className='error-text'>{errors.password}</p>
 
 					<label htmlFor='role'>I am a...</label>
-					<select
-						className='user-select'
-						name='role'
-						id='role'
-						defaultValue=''
-						value={user.role}
-						onChange={handleChange}
-					>
+					<select className='user-select' name='role' id='role' defaultValue='' onChange={handleChange}>
 						<option value='' disabled hidden>
 							Select role
 						</option>
