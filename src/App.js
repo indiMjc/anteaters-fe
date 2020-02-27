@@ -3,11 +3,6 @@ import { Route, Link, withRouter } from 'react-router-dom'
 import { Navbar, Hamburger, AuthForms, Ticket } from './components'
 
 const App = props => {
-	console.log(
-		'props %c --> ',
-		'font-size: 20px; color: black; font-weight: bold; background: linear-gradient(red, black); border: 2px solid black; border-radius: 6px;',
-		props
-	)
 	const [menuClass, setMenuClass] = useState('closed')
 	const [hamburgerVis, setHamburgerVis] = useState('visible')
 

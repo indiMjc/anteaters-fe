@@ -1,6 +1,6 @@
 import React from 'react'
-import axios from 'axios'
-import { useForm, validateRegistration } from '../util'
+
+import { useForm, validateRegistration, submitUserForAuth } from '../util'
 
 const initialFormState = {
 	email: '',
@@ -9,6 +9,8 @@ const initialFormState = {
 	role: ''
 }
 
+const registerUrl = 'https://anteaters.herokuapp.com/auth/register'
+
 const Register = props => {
 	const { values: user, handleChange, handleSubmit, errors } = useForm(
 		initialFormState,
@@ -16,16 +18,8 @@ const Register = props => {
 		validateRegistration
 	)
 
-	async function register() {
-		try {
-			const token = await axios.post('https://anteaters.herokuapp.com/auth/register', user)
-
-			localStorage.setItem('uid', token)
-
-			props.history.push('/')
-		} catch (err) {
-			console.log(err)
-		}
+	function register() {
+		submitUserForAuth(registerUrl, user, props)
 	}
 	return (
 		<div className='register-form-contain' style={{ display: `${props.state}` }}>
@@ -36,21 +30,21 @@ const Register = props => {
 					<input type='text' name='email' id='email' value={user.email} onChange={handleChange} />
 					<p className='error-text'>{errors.email}</p>
 
-					<label htmlFor='username'>Username</label>
+					<label htmlFor='register-username'>Username</label>
 					<input
 						type='text'
 						name='username'
-						id='username'
+						id='register-username'
 						value={user.username}
 						onChange={handleChange}
 					/>
 					<p className='error-text'>{errors.username}</p>
 
-					<label htmlFor='password'>Password</label>
+					<label htmlFor='register-password'>Password</label>
 					<input
 						type='password'
 						name='password'
-						id='password'
+						id='register-password'
 						value={user.password}
 						onChange={handleChange}
 					/>
