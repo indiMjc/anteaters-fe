@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const axiosWithAuth = () => {
+const authAxios = () => {
 	const token = sessionStorage.getItem('token')
 
 	return axios.create({
@@ -11,4 +11,4 @@ export const axiosWithAuth = () => {
 	})
 }
 
-export default axiosWithAuth
+export default authAxios
