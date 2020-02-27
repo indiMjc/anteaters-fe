@@ -1,11 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Login from './Login'
 import Register from './Register'
 
 const AuthForms = props => {
-	//
-	// check for token here and if true, set login to true and register to false
-	//
 	const [visibility, setVisibility] = useState({
 		login: 'none',
 		register: 'flex'
@@ -16,7 +13,7 @@ const AuthForms = props => {
 		register: 'highlight-register'
 	})
 
-	const showLogin = e => {
+	const showLogin = () => {
 		setVisibility({
 			login: 'flex',
 			register: 'none'
@@ -39,6 +36,10 @@ const AuthForms = props => {
 			register: 'highlight-register'
 		})
 	}
+
+	useEffect(() => {
+		localStorage.getItem('uid') && showLogin()
+	}, [])
 
 	return (
 		<section className='log-reg-forms-contain'>

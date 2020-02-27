@@ -1,6 +1,9 @@
 import React from 'react'
+import axios from 'axios'
+import { useDispatch } from 'react-redux'
 
-import { useForm, validateRegistration, submitUserForAuth } from '../util'
+import { useForm, validateRegistration } from '../util'
+import { decodeToken } from '../actions/token'
 
 const initialFormState = {
 	email: '',
@@ -9,8 +12,6 @@ const initialFormState = {
 	role: ''
 }
 
-const registerUrl = 'https://anteaters.herokuapp.com/auth/register'
-
 const Register = props => {
 	const { values: user, handleChange, handleSubmit, errors } = useForm(
 		initialFormState,
@@ -18,8 +19,24 @@ const Register = props => {
 		validateRegistration
 	)
 
-	function register() {
-		submitUserForAuth(registerUrl, user, props)
+	const dispatch = useDispatch()
+
+	async function register() {
+		try {
+			const response = await axios.post('https://anteaters.herokuapp.com/auth/register', user)
+
+			if (response.data.token) {
+				localStorage.setItem('uid', response.data.token)
+
+				dispatch(decodeToken(response.data.token))
+
+				props.history.push('/')
+			}
+
+			return response
+		} catch (err) {
+			console.log(err)
+		}
 	}
 	return (
 		<div className='register-form-contain' style={{ display: `${props.state}` }}>

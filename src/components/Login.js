@@ -1,13 +1,14 @@
 import React from 'react'
+import axios from 'axios'
+import { useDispatch } from 'react-redux'
 
-import { useForm, validateLogin, submitUserForAuth } from '../util'
+import { useForm, validateLogin } from '../util'
+import { decodeToken } from '../actions/token'
 
 const initialFormState = {
 	username: '',
 	password: ''
 }
-
-const loginUrl = 'https://anteaters.herokuapp.com/auth/login'
 
 const Login = props => {
 	const { values: user, handleChange, handleSubmit, errors } = useForm(
@@ -16,8 +17,24 @@ const Login = props => {
 		validateLogin
 	)
 
-	function login() {
-		submitUserForAuth(loginUrl, user, props)
+	const dispatch = useDispatch()
+
+	async function login() {
+		try {
+			const response = await axios.post('https://anteaters.herokuapp.com/auth/login', user)
+
+			if (response.data.token) {
+				localStorage.setItem('uid', response.data.token)
+
+				dispatch(decodeToken(response.data.token))
+
+				props.history.push('/')
+			}
+
+			return response
+		} catch (err) {
+			console.log(err)
+		}
 	}
 	return (
 		<div className='login-form-contain' style={{ display: `${props.state}` }}>
