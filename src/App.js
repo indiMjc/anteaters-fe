@@ -33,7 +33,7 @@ const App = props => {
 				Sign in/Sign up
 			</Link>
 
-			<Route>
+			<Route path='/auth'>
 				<AuthForms {...props} />
 			</Route>
 			<div onClick={fieldClick} className='body' />
