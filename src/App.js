@@ -26,13 +26,16 @@ const App = props => {
 
 			<Route path='/app'>
 				<Hamburger showNav={navClick} hideHamburger={hamburgerClick} hamburgerClass={hamburgerVis} />
+				{/* <h1>test</h1> */}
 			</Route>
 
 			<Link to='/auth' className='auth-link'>
 				Sign in/Sign up
 			</Link>
 
-			<Route exact path='/auth' component={AuthForms} />
+			<Route>
+				<AuthForms {...props} />
+			</Route>
 			<div onClick={fieldClick} className='body' />
 		</div>
 	)

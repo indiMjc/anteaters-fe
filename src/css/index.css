@@ -36,9 +36,11 @@ html .App {
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
 }
 .error-text {
+  color: red;
   height: 0.8rem;
   font-size: 0.8rem;
-  margin: 0 0 2rem 0;
+  font-weight: bolder;
+  margin: 0.2rem 0 2rem 0;
 }
 .main-btn {
   height: 3rem;
@@ -65,6 +67,7 @@ html .App {
 }
 .main-btn:focus {
   outline: none;
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7), 0 0 3pt 2pt #1fd8f4;
 }
 .log-reg-forms-contain {
   display: flex;
@@ -198,6 +201,7 @@ html .App {
 .register-form-contain .auth-img-filter .login-form input:focus,
 .login-form-contain .auth-img-filter .login-form input:focus {
   outline: none;
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7), 0 0 3pt 2pt #1fd8f4;
 }
 .register-form-contain .auth-img-filter .register-form input::placeholder,
 .login-form-contain .auth-img-filter .register-form input::placeholder,
@@ -225,6 +229,7 @@ html .App {
 .register-form-contain .auth-img-filter .login-form select:focus,
 .login-form-contain .auth-img-filter .login-form select:focus {
   outline: none;
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7), 0 0 3pt 2pt #1fd8f4;
 }
 .register-form-contain .auth-img-filter .login-form,
 .login-form-contain .auth-img-filter .login-form {
@@ -345,6 +350,7 @@ html .App {
 }
 .navbar .bar .search:focus {
   outline: none;
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7), 0 0 3pt 2pt #1fd8f4;
 }
 @media (max-width: 1150px) {
   .navbar .bar .search {
@@ -370,7 +376,8 @@ html .App {
   box-shadow: inset -6px -6px 10px #fafbff, inset 6px 6px 20px rgba(166, 171, 189, 0.25);
 }
 .navbar a:focus {
-  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7);
+  outline: none;
+  box-shadow: inset -6px -6px 10px #ffffff, inset 0 0 25px rgba(166, 171, 189, 0.7), 0 0 3pt 2pt #1fd8f4;
 }
 @media (max-width: 1150px) {
   .navbar a {
@@ -407,6 +414,7 @@ html .App {
     line-height: 2.5rem;
   }
   #closed {
+    width: 11rem;
     transform: translateX(-22rem);
     transition-duration: 0.5s;
   }

@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import Login from './Login';
-import Register from './Register';
+import React, { useState } from 'react'
+import Login from './Login'
+import Register from './Register'
 
-const AuthForms = () => {
+const AuthForms = props => {
 	//
 	// check for token here and if true, set login to true and register to false
 	//
 	const [visibility, setVisibility] = useState({
 		login: 'none',
 		register: 'flex'
-	});
+	})
 
 	const [highlight, setHighlight] = useState({
 		login: '',
 		register: 'highlight-register'
-	});
+	})
 
 	const showLogin = e => {
 		setVisibility({
 			login: 'flex',
 			register: 'none'
-		});
+		})
 
 		setHighlight({
 			login: 'highlight-login',
 			register: ''
-		});
-	};
+		})
+	}
 
 	const showRegister = () => {
 		setVisibility({
 			login: 'none',
 			register: 'flex'
-		});
+		})
 
 		setHighlight({
 			login: '',
 			register: 'highlight-register'
-		});
-	};
+		})
+	}
 
 	return (
 		<section className='log-reg-forms-contain'>
@@ -56,14 +56,14 @@ const AuthForms = () => {
 					</div>
 				</div>
 				<div>
-					<Login state={visibility.login} />
+					<Login {...props} state={visibility.login} />
 				</div>
 				<div>
-					<Register state={visibility.register} />
+					<Register {...props} state={visibility.register} />
 				</div>
 			</section>
 		</section>
-	);
-};
+	)
+}
 
-export default AuthForms;
+export default AuthForms
