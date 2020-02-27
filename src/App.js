@@ -26,6 +26,7 @@ const App = props => {
 
 			<Route path='/app'>
 				<Hamburger showNav={navClick} hideHamburger={hamburgerClick} hamburgerClass={hamburgerVis} />
+				{/* <h1>test</h1> */}
 			</Route>
 
 			<Link to='/auth' className='auth-link'>

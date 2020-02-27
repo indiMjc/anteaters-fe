@@ -83,6 +83,7 @@
 
 			&:focus {
 				outline: none;
+				box-shadow: @active-shadow, 0 0 3pt 2pt @txt-color;
 			}
 
 			@media @tablet {
@@ -116,8 +117,8 @@
 		}
 
 		&:focus {
-			box-shadow: @active-shadow;
-			// transform: scale(0.98);
+			outline: none;
+			box-shadow: @active-shadow, 0 0 3pt 2pt @txt-color;
 		}
 
 		@media @tablet {
@@ -169,6 +170,7 @@
 	}
 
 	#closed {
+		width: 11rem;
 		transform: translateX(-22rem);
 		transition-duration: 0.5s;
 	}
